@@ -19,20 +19,18 @@ public class HospitalAppointmentApplication {
 
     @Bean
     public WebMvcConfigurer corsConfigurer(AppCorsProperties corsProps) {
-        return new WebMvcConfigurer() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                String allowed = corsProps.getAllowedOrigins();
 
-                // If empty → production (nginx handles), skip CORS entirely
-                if (allowed == null || allowed.isBlank()) return;
+    return new WebMvcConfigurer() {
 
-                registry.addMapping("/**")
-                        .allowedOrigins(allowed.split(","))
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
-            }
-        };
-    }
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+
+            registry.addMapping("/**")
+                    .allowedOriginPatterns("*")
+                    .allowedMethods("*")
+                    .allowedHeaders("*")
+                    .allowCredentials(false);
+        }
+    };
+}
 }
