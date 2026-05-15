@@ -1,0 +1,27 @@
+networks:
+  default:
+    driver: bridge
+    name: doctor
+    # external: true
+volumes:
+  doctor:
+
+services:
+  mysql:
+    image: vidya07422/doctor-mysql:v1
+    container_name: mysql
+    volumes:
+      - doctor:/var/lib/mysql
+  backend:
+    image: vidya07422/doctor-backend:v1
+    container_name: backend
+    depends_on:
+    - mysql
+  frontend:
+    image: vidya07422/doctor-frontend:v1
+    container_name: frontend
+    ports: 
+    - "80:80"
+    depends_on:
+    - backend
+
