@@ -26,6 +26,10 @@ sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 echo "=== Step 5: Enabling and starting Docker ==="
 sudo systemctl enable --now docker
 
+
+echo "=== Step 5: Enabling and starting Docker ==="
+sudo usermod -aG docker ec2-user
+
 echo "=== Docker installation complete! ==="
 docker --version
 
