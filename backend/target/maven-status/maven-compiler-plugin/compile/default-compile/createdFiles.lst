@@ -1,0 +1,6 @@
+com\example\DoctorAppointment\controller\AppointmentController.class
+com\example\DoctorAppointment\HospitalAppointmentApplication$1.class
+com\example\DoctorAppointment\repo\DoctorRepository.class
+com\example\DoctorAppointment\HospitalAppointmentApplication.class
+com\example\DoctorAppointment\config\AppCorsProperties.class
+com\example\DoctorAppointment\model\DoctorAppointment.class

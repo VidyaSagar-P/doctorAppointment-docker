@@ -1,0 +1,3 @@
+CREATE USER IF NOT EXISTS 'doctor'@'%' IDENTIFIED BY 'Doctor@123';
+GRANT ALL PRIVILEGES ON hospitaldata.* TO 'doctor'@'%';
+FLUSH PRIVILEGES;
