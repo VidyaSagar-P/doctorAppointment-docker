@@ -2,7 +2,7 @@ FROM maven
 ENV DB_HOST=mysql \
     DB_USERNAME=doctor \
     DB_PASSWORD=DoctorApp1 \
-    APP_CORS_ALLOWED_ORIGINS=http://frontend 
+    APP_CORS_ALLOWED_ORIGINS=http://3.88.201.161 
 WORKDIR /opt/server
 COPY pom.xml .
 COPY src /opt/server/src
