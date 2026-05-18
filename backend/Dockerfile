@@ -10,7 +10,7 @@ FROM eclipse-temurin:17-jre-alpine
 EXPOSE 8080
 WORKDIR /opt/server
 RUN addgroup -S doctor && adduser -S doctor -G doctor && \
-    chown -R doctor:doctor /app
+    chown -R doctor:doctor /opt/server
 COPY --from=builder /opt/server .
 USER doctor
 ENTRYPOINT ["java", "-jar", "doctorapp.jar"]
