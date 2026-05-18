@@ -18,9 +18,9 @@ services:
     image: vidya07422/doctor-backend:v1
     container_name: backend
     environment:
-      DB_HOST=mysql 
-      DB_USERNAME=doctor 
-      DB_PASSWORD=DoctorApp1  
+      DB_HOST: mysql 
+      DB_USERNAME: doctor 
+      DB_PASSWORD: DoctorApp1  
     depends_on:
     - mysql
   frontend:
